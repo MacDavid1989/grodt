@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./scss/index.css">
+</head>
+
+<body>
+    <!-- Main input page -->
+    <div class="main">
+        <img src="assets/rich.svg" class ="rich-pic filter-green" alt="">
+        <h1 class="main__title">Get Rich Or Die Trying</h1>
+        <form class="form" action="submit">
+            <div class="form__input">
+                <div class="label-con">
+                    <div class="dollar-con-1">
+                        <h1 class="dollar-sign">$</h1>
+                    </div>
+                    <div class="input-con">
+                        <label class="label" for="stock1">Stock 1</label>
+                        <input class="input" type="text" name="stock1" id="stock1" placeholder="e.g. TSLA"required>
+                    </div>
+                </div>
+
+                <button class="button" type="submit">BATTLE!</button>
+                <div class="label-con">
+                    <div class="input-con">
+                        <label class="label" for="stock2">Stock 2</label>
+                        <input class="input" type="text" name="stock2" id="stock2" placeholder="e.g. AAPL"required>
+                    </div>
+                    <div class="dollar-con-2">
+                        <h1 class="dollar-sign">$</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form__date">
+                <label class ="label__date" for="formDate1">Start Date :</label>
+                <input class="input label__date-input date-move" type="date" name="" id="formDate1" min="1970-02-01" required>
+                <label class ="label__date" for="formDate2">End Date :</label>
+                <input class="input label__date-input" type="date" name="" id="formDate2" min="1970-02-01" required>
+            </div>
+        </form>
+    </div>
+    <!-- Page to choose your investment -->
+    <div class="battle hide">
+        <h1 class="battle__title">Choose Your Investment, Greatest Return Wins!</h1>
+        <div class="battle__container">
+            <!-- PlaceHolder for JS innerText -->
+            <div class="graph-wrapper">
+                <h2 class="stock1__choice">Stock Symbol 1</h2>
+                <img class="stock1__graph graph" src="./assets/stock1.png">
+            </div>
+            <h2 class="compare">OR</h2>
+            <!-- PlaceHolder for JS innerText -->
+            <div class="graph-wrapper">
+                <h2 class="stock2__choice">Stock Symbol 2</h2> 
+                <img class="stock2__graph graph" src="./assets/stock2.png">
+            </div>
+        </div>
+    </div>
+    <!-- Page displaying Losing choice -->
+    <div class="losers hide">
+        <!-- Insert JS created element containing losing % return  -->
+        <h1 class="losers__title">BUSTED</h1>
+        <div class="losers__container">
+            <h2 class="losers__return">10%</h2>
+            <h3 class="losers__text">Your Return Was Lower</h3>
+            <img src="assets/kawhi.jpg" alt="" class="losers__img">   
+        </div>
+        <button class="button-reset2">Play Again!</button>
+    </div>
+    <!-- Page display winning choice -->
+    <div class="ballers hide">
+        <!-- Insert JS created element containing winning %return  -->
+        <h1 class="ballers__title">LOADED</h1>
+        <div class="ballers__container">
+            <h2 class="ballers__return">20%</h2>
+            <h2 class="ballers__text">Your Return Was Higher</h2>
+            <img src="assets/kanye-west.jpg" alt="" class="ballers__img">
+        </div>
+        <button class="button-reset1">Play Again!</button>
+    </div>
+
+
+    <audio class="audio-kawhi" src="sounds/kawhi-laugh.mp3"></audio>
+    <audio class="audio-kanye" src="sounds/versace-pt2.mp3"></audio>
+</body>
+<script src="./script.js"></script>
+</html>
